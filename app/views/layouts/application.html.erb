@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Adamplansky" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Adamplansky" %>">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-    </main>
-  </body>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "Adamplansky" %></title>
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Adamplansky" %>">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <section>
+      <%= image_tag 'jedemedobaru_logo.png', width: '100'%>
+      <a href="/">
+        <h1>Adam Plánský<br>
+          <span>// place for my personal thoughts //</span>
+        </h1>
+      </a>
+    </section>
+  </header>
+  <main role="main">
+    <!-- <%= render 'layouts/messages' %> -->
+     
+    <%= yield %>
+  </main>
+</body>
 </html>

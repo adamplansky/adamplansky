@@ -1,16 +1,17 @@
 // import the CSS framework
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "krutysoubor";
 
 // make all images responsive by default
 img {
   @extend .img-responsive;
   margin: 0 auto;
-  }
+}
 // override for the 'Home' navigation link
 .navbar-brand {
   font-size: inherit;
-  }
+}
 
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create your own classes
@@ -18,29 +19,66 @@ img {
 .column {
   @extend .col-md-6;
   @extend .text-center;
-  }
+}
 .form {
   @extend .col-md-6;
-  }
+}
 .form-centered {
   @extend .col-md-6;
   @extend .text-center;
-  }
+}
 .submit {
   @extend .btn;
   @extend .btn-primary;
   @extend .btn-lg;
-  }
+}
 // apply styles to HTML elements
 // to make views framework-neutral
+body{
+
+}
 main {
   @extend .container;
-  background-color: #eee;
   padding-bottom: 80px;
   width: 100%;
-  margin-top: 51px; // accommodate the navbar
-  }
+}
 section {
   @extend .row;
   margin-top: 20px;
+}
+p, li, h1, h2 {
+  font-size: 20px;
+  line-height: 30px;
+}
+.starter-template{
+ // border-top:1px dashed #000;
+}
+header{
+  text-align:center;
+  font-family:"Helvetica Neue",Helvetica;
+  line-height:0;
+  a{
+    color:#000;
+    @include transition-duration(100ms);
+    @include transition-timing-function(ease-out);
   }
+  a:hover, a:focus{
+    color:#fff;
+    text-shadow: 2px 2px #000;
+    
+     @include transition-duration(250ms);
+     @include transition-timing-function(ease);
+  }
+  h1{
+    font-size:50px;
+    display:inline-block;
+    margin:0;
+    margin-top:20px;
+  }
+  span{
+    margin:0;
+    padding:0;
+    font-size:20px;
+    font-weight:normal;
+  }
+}
